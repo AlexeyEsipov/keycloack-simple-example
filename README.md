@@ -165,6 +165,6 @@ docker-compose up -d app
 ![1Swagger](imagesswagger/014.PNG)
 Затем нажмите **Execute**
 ![1Swagger](imagesswagger/015.PNG)
-Реультат - код 200 OK и мы получили имя пользователя
+Реультат - код **200 OK** и мы получили имя пользователя
 ![1Swagger](imagesswagger/016.PNG)
 Приложение работает верно.
