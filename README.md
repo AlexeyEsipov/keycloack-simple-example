@@ -15,12 +15,16 @@ docker-compose up -d keycloak
 Проводим действия по настройке Keycloack.
 
 Заходим в административную консоль:
-
 ![1Keycloak Admin ConcoleEntry](images/001.PNG)
 
-В меню выбираем пункт Manage realms:
-
+Первоначально мы попадаем в master realm
 ![2Keycloak Realm Setup](images/002.png)
+
+Нам надо создать собственную realm. Для этого 
+в меню выбираем пункт Manage realms и нажимаем кнопку Create realm:
+![2Keycloak Realm Setup](images/001a.png)
+
+
 
 ![3Keycloak Realm Setup](images/003.PNG)
 ![4Keycloak Realm Setup](images/004.PNG)
