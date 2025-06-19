@@ -1,14 +1,14 @@
 # Инструкция по запуску Keycloak и Spring Boot приложения
-Приложение демонстрирует пример создания пользователя, его авторизации и доступа к защащенному ресурсу 
-с использованием KeyCloack и SpringBoot.
+Приложение демонстрирует пример создания пользователя, его авторизации и доступа к защищенному ресурсу 
+с использованием **KeyCloack** и **SpringBoot**.
 
 Версии приложений: 
 
-SpringBoot - 3.5.0, 
+SpringBoot - **3.5.0**, 
 
-KeyClock - 26.2.5, 
+KeyClock - **26.2.5**, 
 
-библиотека org.keycloak:keycloak-admin-client версии 26.0.5 
+библиотека **org.keycloak:keycloak-admin-client** версии **26.0.5** 
 
 ## Предварительные требования
 - Установленный Docker Desktop
@@ -31,34 +31,34 @@ docker-compose up -d keycloak
 ![2Keycloak Realm Setup](images/002.png)
 
 Нам надо создать собственную realm. Для этого 
-в меню выбираем пункт Manage realms и нажимаем кнопку Create realm:
+в меню выбираем пункт **Manage realms** и нажимаем кнопку **Create realm**:
 ![2Keycloak Realm Setup](images/001a.PNG)
 
 Нам надо создать realm с именем test-realm.  
-Для этого сначала вводим имя test-realm в поле Realm name:
+Для этого сначала вводим имя **test-realm** в поле **Realm name**:
 ![3Keycloak Realm Setup](images/003.PNG)
 
 Затем в поле Resource file загрузим json-файл с готовыми настройками realm.
-Для этого нажмите кнопку Browse и выберите для загрузки файл realm-export.json. 
+Для этого нажмите кнопку **Browse** и выберите для загрузки файл **realm-export.json**. 
 Он находится в корне проекта:
 ![4Keycloak Realm Setup](images/004.PNG)
 
-После загрузки json-файла проверьте, что переключатель Enabled находится в положении ON
-и нажмите кнопку Create
+После загрузки json-файла проверьте, что переключатель **Enabled** находится в положении **ON**
+и нажмите кнопку **Create**
 ![5Keycloak Realm Setup](images/005.PNG)
 
-Далее мы видим, что созданная нами test-realm становитсятекущей realm:
+Далее мы видим, что созданная нами test-realm становится текущей realm:
 ![6Keycloak Realm Setup](images/006.PNG)
 
-В главном меню (слева) выбираем пункт Clients и убеждаемся, что есть созданный нами через 
-настройки json-файла клиент spring-boot-app 
+В главном меню (слева) выбираем пункт **Clients** и убеждаемся, что есть созданный нами через 
+настройки json-файла клиент **spring-boot-app** 
 ![7Keycloak Realm Setup](images/007.PNG)
 
-Заходим в него и переходим на вкладку Credentials:
+Заходим в него и переходим на вкладку **Credentials**:
 ![8Keycloak Realm Setup](images/008.PNG)
 Так как при первоначальном создании клиента у него не сгенерирован секрет, 
-то нам надо его сгенерировать. Для этого в поле Client Secret нажимаем на кнопку Regenerate 
-и далее выбираем Yes: 
+то нам надо его сгенерировать. Для этого в поле **Client Secret** нажимаем на кнопку **Regenerate** 
+и далее выбираем **Yes**: 
 ![9Keycloak Realm Setup](images/009.PNG)
 Сгенерированный секрет (katBmr....) копируем в буфер обмена. Этот секрет понадобится нам в следующих настройках.
 ![10Keycloak Realm Setup](images/010.PNG)
@@ -75,7 +75,7 @@ docker-compose build app
 docker-compose up -d app
 ```
 ### Шаг 5: Проверка работоспособности приложения
-Приложение будет запущено на порту 8090. Для проверки работоспособности  
+Приложение будет запущено на порту **8090**. Для проверки работоспособности  
 нам потребуется Postman.
 
 ![11Keycloak Realm Setup](images/011.PNG)
