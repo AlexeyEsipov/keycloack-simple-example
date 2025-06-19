@@ -16,7 +16,7 @@ docker-compose up -d keycloak
 
 Заходим в административную консоль:
 
-![1Keycloak Admin ConcoleEntry](images/001.png)
+![1Keycloak Admin ConcoleEntry](images/001.PNG)
 
 В меню выбираем пункт Manage realms:
 
