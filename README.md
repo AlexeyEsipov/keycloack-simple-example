@@ -40,7 +40,7 @@ docker-compose up -d keycloak
 Для этого сначала вводим имя **test-realm** в поле **Realm name**:
 ![3Keycloak Realm Setup](images/003.PNG)
 
-Затем в поле Resource file загрузим json-файл с готовыми настройками realm.
+Затем в поле **Resource file** загрузим json-файл с готовыми настройками realm.
 Для этого нажмите кнопку **Browse** и выберите для загрузки файл **realm-export.json**. 
 Он находится в корне проекта:
 ![4Keycloak Realm Setup](images/004.PNG)
