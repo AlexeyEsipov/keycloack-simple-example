@@ -143,22 +143,28 @@ docker-compose up -d app
 ![1Swagger](imagesswagger/005.PNG)
 Проверим, что этот пользователь получил роль **user** 
 ![1Swagger](imagesswagger/006.PNG)
-Теперь авторизуем его. В Swagger'e перейдем на вкладку **/auth/signup**
+Теперь авторизуем его. В Swagger'e перейдем на вкладку **/auth/signup** и нажмем **Try it out**
 ![1Swagger](imagesswagger/007.PNG)
-и нажмите **Try it out**
-![1Swagger](imagesswagger/008.PNG)
 Затем нажмите **Execute**
+![1Swagger](imagesswagger/008.PNG)
+Авторизация произошла успешно, в ответ мы получили **токены авторизации**
 ![1Swagger](imagesswagger/009.PNG)
-Авторизацияпроизошла успешно, в ответ мы получили токены авторизации
-![1Swagger](imagesswagger/010.PNG)
 Нам потребуется токен доступа - выделим его и скопируем в буфер обмена:
-![1Swagger](imagesswagger/011.PNG)
-Для доступа к защищенному ресурсу надо добавить в Swagger токен доступа. 
-Для этого в верхнем правом углу страницы надо найти кнопку Authorize и затем нажать ее
+![1Swagger](imagesswagger/010.PNG)
+Для доступа к защищенному ресурсу надо добавить в **Swagger** токен доступа.
+Для этого в верхнем правом углу страницы надо найти кнопку **Authorize** и затем нажать ее
 ![1Swagger](imagesswagger/011a.PNG)
-
+В появившееся окно надо вставить скопированный ранее **access-token**
+![1Swagger](imagesswagger/011.PNG)
+Вставляем токен и нажимаем кнопку **Authorize**
 ![1Swagger](imagesswagger/012.PNG)
+Токен принят, нажимаем **Close**
 ![1Swagger](imagesswagger/013.PNG)
+Теперь переходим к защищенному ресурсу - на вкладку **/quard/hello**
+и нажимаем **Try it out**
 ![1Swagger](imagesswagger/014.PNG)
+Затем нажмите **Execute**
 ![1Swagger](imagesswagger/015.PNG)
+Реультат - код 200 OK и мы получили имя пользователя
 ![1Swagger](imagesswagger/016.PNG)
+Приложение работает верно.
