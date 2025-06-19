@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.2.5
+    container_name: keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HEALTH_ENABLED: "true"
+      KC_METRICS_ENABLED: "true"
+      JAVA_OPTS: "-Xms512m -Xmx1024m"
+    command: start-dev
+    ports:
+      - "8180:8080"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  springboot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - env.properties
+    ports:
+      - "8090:8090"
+    depends_on:
+      keycloak:
+        condition: service_healthy
