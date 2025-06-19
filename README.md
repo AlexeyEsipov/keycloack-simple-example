@@ -46,7 +46,11 @@ docker-compose up -d keycloak
 
 Заходим в него и переходим на вкладку Credentials:
 ![8Keycloak Realm Setup](images/008.PNG)
+Так как при первоначальном создании клиента у него не сгенерирован секрет, 
+то нам надо его сгенерировать. Для этого в поле Client Secret нажимаем на кнопку Regenerate 
+и далее выбираем Yes: 
 ![9Keycloak Realm Setup](images/009.PNG)
+Сгенерированный секрет копируем в буфер обмена. Этот секрет понадобится нам в следующих настройках.
 ![10Keycloak Realm Setup](images/010.PNG)
 
 ### Шаг 3: Создание файла env.properties
