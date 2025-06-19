@@ -19,12 +19,19 @@ public class SpringSecurityConfig {
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(new KCRoleConverter());
         http
             .csrf(AbstractHttpConfigurer::disable)
-            .authorizeHttpRequests(
-                authorize -> authorize
-                .requestMatchers("auth/signup").permitAll()
-                .requestMatchers("auth/signin").permitAll()
-                .anyRequest().hasRole("user")
-            )
+                .authorizeHttpRequests(
+                    authorize -> authorize
+                        .requestMatchers(
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/swagger-resources/**",
+                                "/webjars/**"
+                        ).permitAll()
+                        .requestMatchers("auth/signup").permitAll()
+                        .requestMatchers("auth/signin").permitAll()
+                        .anyRequest().hasRole("user")
+                )
             .oauth2ResourceServer(
                 o -> o.jwt(
                     j -> j.jwtAuthenticationConverter(jwtAuthenticationConverter)
