@@ -70,8 +70,8 @@ public class UserService {
             String refreshToken;
             String idToken;
             try (Keycloak keycloakUser = KeycloakBuilder.builder()
-                    .serverUrl(serverURL) // не меняется
-                    .realm(realm) // не меняется
+                    .serverUrl(serverURL)
+                    .realm(realm)
                     .grantType(OAuth2Constants.PASSWORD)
                     .clientId(serviceClientID)
                     .clientSecret(serviceClientSecret)
