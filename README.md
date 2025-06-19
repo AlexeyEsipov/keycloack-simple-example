@@ -105,4 +105,3 @@ FakturaTest.postman_collection.json. Эта коллекция находитс�
 ![21Keycloak Realm Setup](images/021.PNG)
 
 Приложение работает верно.
-`
