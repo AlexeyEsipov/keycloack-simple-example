@@ -85,6 +85,8 @@ docker-compose build app
 docker-compose up -d app
 ```
 ### Шаг 5: Проверка работоспособности приложения
+
+## Проверка с использованием POSTMAN
 После запуска приложение будет доступно на порту **8090**. Для проверки работоспособности  
 нам потребуется **Postman**. Откройте его и, используя кнопку Import, загрузите коллекцию запросов 
 **FakturaTest.postman_collection.json**. Эта коллекция находится в корне проекта:
@@ -122,3 +124,22 @@ docker-compose up -d app
 ![21Keycloak Realm Setup](images/021.PNG)
 
 Приложение работает верно.
+
+## Проверка с использованием SWAGGER
+В приложении добавлена поддержка Swagger.
+![1Swagger](imagesswagger/001.PNG)
+![1Swagger](imagesswagger/002.PNG)
+![1Swagger](imagesswagger/003.PNG)
+![1Swagger](imagesswagger/004.PNG)
+![1Swagger](imagesswagger/005.PNG)
+![1Swagger](imagesswagger/006.PNG)
+![1Swagger](imagesswagger/007.PNG)
+![1Swagger](imagesswagger/008.PNG)
+![1Swagger](imagesswagger/009.PNG)
+![1Swagger](imagesswagger/010.PNG)
+![1Swagger](imagesswagger/011.PNG)
+![1Swagger](imagesswagger/012.PNG)
+![1Swagger](imagesswagger/013.PNG)
+![1Swagger](imagesswagger/014.PNG)
+![1Swagger](imagesswagger/015.PNG)
+![1Swagger](imagesswagger/016.PNG)
