@@ -22,7 +22,7 @@ docker-compose up -d keycloak
 
 Нам надо создать собственную realm. Для этого 
 в меню выбираем пункт Manage realms и нажимаем кнопку Create realm:
-![2Keycloak Realm Setup](images/001a.png)
+![2Keycloak Realm Setup](images/001a.PNG)
 
 
 
