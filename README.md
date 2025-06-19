@@ -66,7 +66,7 @@ docker-compose up -d keycloak
 ![10Keycloak Realm Setup](images/010.PNG)
 
 ### Шаг 3: Создание файла env.properties
-Заполняем файл **env.properties**.
+Заполняем файл **.env.properties**.
 Этот файл находится в корне проекта, он уже предзаполнен. Надо только добавить сохраненный на предыдущем шаге секрет в свойство по ключу
 **KEYCLOAK_SECRET**
 
