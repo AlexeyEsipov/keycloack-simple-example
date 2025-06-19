@@ -29,16 +29,22 @@ docker-compose up -d keycloak
 ![3Keycloak Realm Setup](images/003.PNG)
 
 Затем в поле Resource file загрузим json-файл с готовыми настройками realm.
-Для этого нажмите кнопку Browse
+Для этого нажмите кнопку Browse и выберите для загрузки файл realm-export.json. 
+Он находится в корне проекта:
 ![4Keycloak Realm Setup](images/004.PNG)
 
-и выберите для загрузки файл realm-export.json. Он находится в корне проекта:
+После загрузки json-файла проверьте, что переключатель Enabled находится в положении ON
+и нажмите кнопку Create
 ![5Keycloak Realm Setup](images/005.PNG)
 
-После загрузки json-файла проверьте, что переключатель Enabled находится в положении ON 
-и нажмите кнопку Create
+Далее мы видим, что созданная нами test-realm становитсятекущей realm:
 ![6Keycloak Realm Setup](images/006.PNG)
+
+В главном меню (слева) выбираем пункт Clients и убеждаемся, что есть созданный нами через 
+настройки json-файла клиент spring-boot-app 
 ![7Keycloak Realm Setup](images/007.PNG)
+
+Заходим в него и переходим на вкладку Credentials:
 ![8Keycloak Realm Setup](images/008.PNG)
 ![9Keycloak Realm Setup](images/009.PNG)
 ![10Keycloak Realm Setup](images/010.PNG)
