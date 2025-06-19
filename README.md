@@ -24,11 +24,19 @@ docker-compose up -d keycloak
 в меню выбираем пункт Manage realms и нажимаем кнопку Create realm:
 ![2Keycloak Realm Setup](images/001a.PNG)
 
-
-
+Нам надо создать realm с именем test-realm.  
+Для этого сначала вводим имя test-realm в поле Realm name:
 ![3Keycloak Realm Setup](images/003.PNG)
+
+Затем в поле Resource file загрузим json-файл с готовыми настройками realm.
+Для этого нажмите кнопку Browse
 ![4Keycloak Realm Setup](images/004.PNG)
+
+и выберите для загрузки файл realm-export.json. Он находится в корне проекта:
 ![5Keycloak Realm Setup](images/005.PNG)
+
+После загрузки json-файла проверьте, что переключатель Enabled находится в положении ON 
+и нажмите кнопку Create
 ![6Keycloak Realm Setup](images/006.PNG)
 ![7Keycloak Realm Setup](images/007.PNG)
 ![8Keycloak Realm Setup](images/008.PNG)
