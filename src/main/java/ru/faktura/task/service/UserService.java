@@ -60,7 +60,7 @@ public class UserService {
     }
 
     public UserResponse getUser(LoginPassword userRequest) {
-        String name = userRequest.getLogin();
+        String name = userRequest.login();
         boolean userExist = usersResource.searchByAttributes("username:" + name)
             .stream()
             .anyMatch(user -> name.equals(user.getUsername()));
@@ -77,7 +77,7 @@ public class UserService {
                     .clientSecret(serviceClientSecret)
                     .scope("openid")
                     .username(name)
-                    .password(userRequest.getPassword())
+                    .password(userRequest.password())
                     .build()) {
                 TokenManager tm = keycloakUser.tokenManager();
                 accessToken = tm.getAccessTokenString();
@@ -90,19 +90,19 @@ public class UserService {
     }
 
     public String createUser(CreateUserRequest user) {
-        String login = user.getLogin();
+        String login = user.login();
         String userId = null;
         boolean notExist = usersResource.searchByAttributes("username:" + login)
             .stream()
             .noneMatch(el -> login.equals(el.getUsername()));
         if (notExist) {
-            String password = user.getPassword();
+            String password = user.password();
             UserRepresentation kcUser = new UserRepresentation();
             kcUser.setCredentials(Collections.singletonList(createPasswordCredentials(password)));
             kcUser.setUsername(login);
-            kcUser.setEmail(user.getEmail());
-            kcUser.setFirstName(user.getFirstName());
-            kcUser.setLastName(user.getLastName());
+            kcUser.setEmail(user.email());
+            kcUser.setFirstName(user.firstName());
+            kcUser.setLastName(user.lastName());
             kcUser.setEnabled(true);
             kcUser.setEmailVerified(true);
             try (Response response = usersResource.create(kcUser)) {
